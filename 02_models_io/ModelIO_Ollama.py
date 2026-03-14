@@ -4,12 +4,15 @@
 # pip install --upgrade --force-reinstall cffi
 
 import os
+from dotenv import load_dotenv
 from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_core.messages import HumanMessage
 
+load_dotenv()
+
 chatLLM = ChatTongyi(
     model="qwen-plus",
-    api_key=os.getenv("aliQwen-api"),
+    api_key=os.getenv("aliQwen_api"),
     streaming=True,
     # other params...
 )

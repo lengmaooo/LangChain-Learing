@@ -1,6 +1,9 @@
 # 1.导入依赖
 import os
+from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
+
+load_dotenv()
 
 # 2.实例化模型
 model = init_chat_model(

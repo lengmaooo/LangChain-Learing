@@ -2,13 +2,17 @@
 
 # 1.导入依赖
 from langchain.chat_models import init_chat_model
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # 2.实例化模型
 # 什么是关键字参数 k1=v1 ,k2 = v2
 model = init_chat_model(
     model="qwen3.5-plus",
     model_provider="openai",
-    api_key="XXXXX",
+    api_key=os.getenv("aliQwen_api"),
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 

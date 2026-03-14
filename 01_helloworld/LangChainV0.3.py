@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 # llm = ChatOpenAI(
 #     model="qwen-plus",
 #     # 配置进环境变量
-#     api_key=os.getenv("aliQwen-api"),
+#     api_key=os.getenv("aliQwen_api"),
 #     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 # )
 
